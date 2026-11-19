@@ -350,6 +350,9 @@ const projectId = toRef(props, 'projectId')
 const DRAG_OPTIONS = {
 	// sortable options
 	animation: 150,
+	// Sortable's default edge zone (30px) is too narrow to reliably trigger auto-scroll
+	// towards buckets that are off screen.
+	scrollSensitivity: 80,
 	ghostClass: 'ghost',
 	dragClass: 'task-dragging',
 	delayOnTouchOnly: true,
